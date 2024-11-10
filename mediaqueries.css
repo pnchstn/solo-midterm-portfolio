@@ -32,6 +32,12 @@
   .section-container {
     display: block;
   }
+  #profile{
+    display: block;
+    height: fit-content;
+    margin-bottom: 0;
+
+  }
   .arrow {
     display: none;
   }
@@ -53,15 +59,19 @@
 }
 
 @media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
+  #contact {
+    height: fit-content;
+    display: block;
+  }
+  footer{
+    height: 10vh;
   }
   footer p {
-    font-size: 20px;
+    font-size: 15px;
   }
   #profile {
-    height: 83vh;
+    display: block;
+    height: fit-content;
     margin-bottom: 0;
   }
   article {

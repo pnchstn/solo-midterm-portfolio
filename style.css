@@ -309,8 +309,8 @@ section {
 /* Icon Hover Animation */
 
 #profile .icon:hover {
-  transform: scale(1.1); /* Slightly scale up the icon */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth effect */
+    height: 2.5rem;
 }
 
 .section__pic-container {
@@ -318,6 +318,7 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+  margin-right: 5.5rem;
 }
 
 .section__text {
@@ -358,6 +359,7 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+  margin-top: 0.5rem;
 }
 
 /* BUTTONS */
@@ -376,31 +378,31 @@ section {
   border-radius: 2rem;
 }
 
+/* Primary Button Style */
+
 .btn-color-1 {
-  background-color: #8D3199;
-  color: #EBD9CA;
+  background-color: #219ebc; /* Blue */
+  color: #023047; /* Dark Blue */
   border: none;
 }
 
 .btn-color-2 {
-  background-color: #B5CC39;
-  color: #280F3E;
+  background-color: #ffb703; /* Yellow */
+  color: #023047; /* Dark Blue */
   border: none;
 }
 
-.btn-color-1:hover,
-.btn-color-2:hover {
+/* Hover Effects */
+.btn-color-1:hover {
+  background-color: #ffb703; /* Yellow on hover */
+  color: #023047; /* Dark Blue */
   cursor: pointer;
 }
 
-.btn-color-1:hover {
-  background-color: #B5CC39;
-  color: #280F3E;
-}
-
 .btn-color-2:hover {
-  background-color: #8D3199;
-  color: #EBD9CA;
+  background-color: #219ebc; /* Blue on hover */
+  color: #023047; /* Dark Blue */
+  cursor: pointer;
 }
 
 /* ABOUT SECTION */
@@ -433,7 +435,7 @@ section {
   
   padding: 2rem; /* Increase padding for more internal spacing */
   flex: 1;
-  border-radius: 3rem;
+  border-radius: 1.5rem;
   border: 0.1rem solid #EBD9CA;
   text-align: center; /* Center text within the box */
   background-color:#280F3E;
@@ -479,7 +481,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 2.5rem;
+  gap: 1rem;
 }
 
 article {
@@ -510,7 +512,7 @@ article .icon {
 #projects .details-container {
   padding: 2rem;
   flex: 1;
-  border-radius: 3rem;
+  border-radius: 2rem;
   border: 0.1rem solid #EBD9CA;
   text-align: center;
   background-color: #8D3199;
@@ -518,7 +520,7 @@ article .icon {
 }
 
 .project-img {
-  border-radius: 2rem;
+  border-radius: 1rem;
   width: 90%;
   height: 90%;
 }
@@ -529,7 +531,7 @@ article .icon {
 }
 
 .project-btn {
-  color: white;
+  color: #023047; /* Dark Blue */
   border-color: rgb(163, 163, 163);
 }
 
@@ -548,6 +550,7 @@ article .icon {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  border: 0.1rem solid #8D3199;
   background: linear-gradient(to bottom, #8D3199, #280F3E, #280F3E);
   color: #EBD9CA;
   width: 100%;
@@ -556,7 +559,6 @@ article .icon {
 }
 
 .contact-info-upper-container {
-  display: flex;
   justify-content: center;
   border-radius: 2rem;
   border: 0.1rem solid #AB9E98;
@@ -564,7 +566,7 @@ article .icon {
   background: #8D3199;
   color: #EBD9CA;
   margin: 2rem auto;
-  padding: 0.5rem;
+  width: 50rem;
 }
 
 .contact-info-container {
@@ -589,18 +591,18 @@ article .icon {
   height: 2.5rem;
 }
 
-/* Base styles for the contact form */
 .contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
   border-radius: 2rem;
-  border: 1px solid #AB9E98; /* Match the contact section border color */
-  background-color: #8D3199; /* Purple background color for form */
+  border: 1px solid #AB9E98;
+  background-color: #8D3199; 
   color: #EBD9CA;
+  box-shadow: -10px 15px 12px rgba(40, 15, 62, 0.5);
   width: 80%;
-  max-width: 600px; /* Max width to avoid stretching on large screens */
+  max-width: 600px; 
   margin: 2rem auto;
   box-sizing: border-box;
 }
@@ -637,8 +639,8 @@ article .icon {
 }
 
 .contact-form button {
-  background-color: #B5CC39;
-  color: #280F3E;
+  background-color: #ffb703; /* Yellow */
+  color: #023047; /* Dark Blue */
   border: none;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -649,8 +651,9 @@ article .icon {
 }
 
 .contact-form button:hover {
-  background-color: #8D3199; /* Purple hover */
-  color: #EBD9CA;
+  background-color: #219ebc; /* Blue on hover */
+  color: #023047; /* Dark Blue */
+  cursor: pointer;
 }
 
 .success-message {
@@ -728,10 +731,13 @@ article .icon {
 /* FOOTER */
 
 footer {
- 
-  color: #AB9E98;
+  height: 10vh;
+  background-color: #8D3199;
+  margin: 0;
 }
 
 footer p {
+  margin-top: 1rem;
+  justify-content: center;
   text-align: center;
 }
