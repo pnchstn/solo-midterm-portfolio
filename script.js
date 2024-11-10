@@ -1,8 +1,10 @@
-document.querySelector('.hamburger-icon').addEventListener('click', () => {
-document.querySelector('.menu-links').classList.toggle('open');
-document.querySelector('.hamburger-icon').classList.toggle('open');
-});
-  
+function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
+}
+
 function openPDF() {
     // Here you can add any additional actions you want to perform before opening the PDF
     console.log("CV Download button clicked!"); // Example action
@@ -25,7 +27,6 @@ function openImage(imageSrc) {
   modal.appendChild(img);
   document.body.appendChild(modal);
 }
-
 
   // Function to open and play video in a modal
 

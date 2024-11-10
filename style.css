@@ -107,7 +107,7 @@ a:hover {
 /* HAMBURGER MENU */
 
 #hamburger-nav {
-  display: inline-block; /* Show hamburger menu */
+  display: none; /* Show hamburger menu */
 }
 
 .hamburger-menu {
@@ -151,6 +151,7 @@ a:hover {
 /* Apply animations to menu links */
 
 .menu-links {
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -232,7 +233,8 @@ a:hover {
 .menu-links.open a:hover {
   background-color: #8D3199; /* Purple background on hover */
   color: #B5CC39; /* Bright green text on hover */
-}
+} 
+
 
 /* SECTIONS */
 
@@ -698,15 +700,15 @@ article .icon {
 
 /* Positioning the up and down buttons on opposite sides */
 #scrollUp {
-  left: 20px;
-  bottom: 80px;
+  left: 30px;
+  bottom: 15px;
   color: #280F3E; /* Darker text color */
   background-color: #B5CC39; /* Lighter background */
 }
 
 #scrollDown {
-  right: 813px;
-  bottom: 20px;
+  right: 20px;
+  bottom: 15px;
   color: #280F3E; /* Darker text color */
   background-color: #B5CC39; /* Lighter background */
 }
