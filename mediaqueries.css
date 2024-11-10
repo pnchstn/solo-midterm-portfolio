@@ -60,9 +60,52 @@
 
 @media screen and (max-width: 600px) {
   #contact {
-    height: fit-content;
-    display: block;
-  }
+      padding: 1rem;
+      margin-left: 0;
+    }
+  
+    .contact-info-upper-container {
+      width: 60%;
+      margin: 1rem 0;
+      border-radius: 1rem;
+    }
+  
+    .contact-info-container {
+      display: block;
+      text-align: center;
+      margin: 1rem 0;
+    }
+  
+    .contact-form {
+      width: 90%;
+      padding: 1rem;
+      max-width: 100%;
+      box-shadow: none;
+      border-radius: 1rem;
+    }
+  
+    .contact-form input[type="email"],
+    .contact-form textarea {
+      padding: 0.75rem;
+      font-size: 0.9rem;
+    }
+  
+    .contact-form label {
+      font-size: 1rem;
+    }
+  
+    .contact-form button {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      border-radius: 1.5rem;
+    }
+  
+    .form-buttons {
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 100%;
+    }
+  
   footer{
     height: 10vh;
   }
@@ -86,10 +129,7 @@
   .btn-container {
     flex-wrap: wrap;
   }
-  .contact-info-container {
-    display: block;
-    height: fit-content;
-  }
+
   .contact-info-container p,
   .nav-links li a {
     font-size: 1rem;
