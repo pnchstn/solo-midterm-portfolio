@@ -35,7 +35,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
-  background-color: #8D3199; /* Purple color for nav background */
+  background-color: #280F3E; 
 }
 
 .nav-links {
@@ -46,7 +46,7 @@ nav {
 }
 
 .nav-links a {
-  color: #06362D; /* Dark green for nav links */
+  color: #FFD500;
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -295,7 +295,7 @@ section {
   justify-content: center;
   gap: 0rem;
   height: 80vh;
-  background: linear-gradient(to bottom, #280F3E, #280F3E, #8D3199); /* Gradient from top to bottom */
+  background: linear-gradient(to bottom, #280F3E, #8D3199, #280F3E); /* Gradient from top to bottom */
   color: #EBD9CA; /* Light color for section text */
   margin: 0;
 }
@@ -347,7 +347,7 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
-  color: #B5CC39;
+  color: #faf600;
 }
 
 /* SOCIAL MEDIA ICONS */
@@ -410,14 +410,109 @@ section {
 
 /* ABOUT SECTION */
 
+/* General Section Styling */
 #about {
-  position: relative;
+  background: linear-gradient(to bottom, #280F3E, #280F3E,#8D3199, #8D3199); /* Gradient from top to bottom */
+  color: #EBD9CA; /* Light color for section text */
+  padding: 50px 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.section-title {
+  color: #faf600;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* What I Do Section */
+.what-i-do {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.what-i-do-item {
+  width: 200px;
+  text-align: center;
+}
+
+.what-i-do-item .icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+}
+
+.what-i-do-item h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  color: #0bedfd;
+}
+
+.what-i-do-item p {
+  font-size: 14px;
+  color: #ce9f29;
+}
+
+/* About Christian Section */
+.about-lavish {
+  margin-top: 50px;
+  text-align: left;
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between; /* Align elements to the left and right */
+}
+
+.about-description {
+  font-size: 15px;
+  color: #ccc;
+  margin-bottom: 30px;
+  width: 45%; /* Ensure the paragraph occupies 45% width */
+}
+
+.section-subtitle {
+  color: #0bedfd;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.about-lavish p {
+  font-size: 18px;
+  color: #FFD500;
+  margin-bottom: 30px;
+}
+
+/* Skills Section */
+.skills {
   display: flex;
   flex-direction: column;
-  padding: 6rem;  
-  margin: 0; 
-  align-items: center; /* Center the content horizontally */
-  background: linear-gradient(to bottom, #8D3199, #280F3E, #280F3E);
+  gap: 14px;
+  width: 45%; /* Ensure skill bars occupy 45% width */
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #fff;
+}
+
+.skill-bar {
+  background-color: #333;
+  height: 6px;
+  width: 70%;
+  margin-left: 20px;
+  position: relative;
+}
+
+.skill-level {
+  background-color: #FFD500;
+  height: 100%;
 }
 
 .about-containers {
@@ -445,40 +540,58 @@ section {
   color: #EBD9CA;
 }
 
-/* Additional text centering and font styling */
-.section__text {
-  text-align: center;
-}
-
-/* ABOUT SECTION ICON STYLING */
-
-#about .icon {
-  background-color: #D1A505; /* Golden color for icon background */
-  border-radius: 50%;
-  padding: 0.5rem; /* Add padding for better appearance */
-}
-
 /* EXPERIENCES SECTION */
 
 #experiences {
-  padding: 5rem;
-  margin: 0; 
-  position:relative;
-  background: linear-gradient(to bottom, #280F3E, #8D3199, #8D3199);
+  background: linear-gradient(to bottom, #8D3199, #280F3E,#280F3E, #8D3199); /* Gradient from top to bottom */
+  color: #EBD9CA; /* Light color for section text */
+  margin: 0;
 }
 
-.experiences-sub-title {
-  color: #AB9E98;
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-}
-
-.experiences-details-container {
+.timeline-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  position: relative;
 }
+
+.timeline-item {
+  width: 60%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 1px);
+  height: 100%;
+  width: 2px;
+  background-color: #ddd;
+}
+
+.timeline-content {
+  width: 80%;
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-right: auto;
+  text-align: left;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: auto;
+  text-align: left;
+}
+
 
 .article-container {
   display: flex;
@@ -500,42 +613,60 @@ article .icon {
 
 /* PROJECTS SECTION */
 
-#projects {
-  padding: 5rem;
-  margin: 0; 
-  position:relative;
-  background: linear-gradient(to bottom, #8D3199, #280F3E, #280F3E);
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
 }
 
-.color-container {
-  background: #280F3E;
-  border-color: #AB9E98;
-}
-
-#projects .details-container {
-  padding: 2rem;
-  flex: 1;
-  border-radius: 2rem;
-  border: 0.1rem solid #EBD9CA;
+.project-card {
+  background-color: #ffb703;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   text-align: center;
-  background-color: #8D3199;
-  color: #EBD9CA;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #023047;
+}
+
+.project-info p {
+  font-size: 0.8rem;
+  color: white;
+}
+
+.read-more-btn {
+  background-color: #48C774;
+  color: #023047;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.read-more-btn:hover {
+  background-color: #219ebc;
 }
 
 .project-img {
   border-radius: 1rem;
   width: 90%;
   height: 90%;
-}
-
-.project-title {
-  margin: 1rem;
-  color: #B5CC39;
-}
-
-.project-btn {
-  color: #023047; /* Dark Blue */
-  border-color: rgb(163, 163, 163);
 }
 
 #achievement {
