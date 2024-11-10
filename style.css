@@ -1,0 +1,737 @@
+/* GENERAL STYLES */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #280F3E;  
+  font-family: "Poppins", sans-serif;
+  color: #EBD9CA; /* Light text color */
+}
+
+p {
+  color: #EBD9CA; /* Light color for general text */
+}
+
+/* TRANSITIONS */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+  background-color: #8D3199; /* Purple color for nav background */
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+  display: flex; /* Use flex to layout the links */
+}
+
+.nav-links a {
+  color: #06362D; /* Dark green for nav links */
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: 0.2rem;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Effect: Underline grow and color change on hover */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #FFD500; /* Bright yellow underline */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  color: #B5CC39; /* Bright green on hover */
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.nav-links a:hover {
+  color: #FFD500; /* Bright yellow hover effect */
+}
+
+a {
+  color: #EBD9CA;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: #AB9E98;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: #B5CC39;
+}
+
+.logo {
+  font-size: 2rem;
+  display: none;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: inline-block; /* Show hamburger menu */
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 35px;
+  left: 25px;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  position: relative;
+  z-index: 10; /* Ensure it's clickable above other elements */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hamburger-icon:hover {
+  transform: scale(1.1); /* Slightly increase size */
+  background-color: rgba(0, 0, 0, 0.1); /* Light overlay effect */
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  transition: all 0.3 ease-in-out;
+  transition: background-color 0.3s ease;
+  background-color: #EBD9CA; /* Light color for hamburger menu lines */
+}
+
+.hamburger-icon:hover span {
+  background-color: #B5CC39; /* Bright green on hover */
+}
+
+/* MENU-LINKS */
+
+/* Apply animations to menu links */
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  opacity: 0; /* Hidden by default */
+}
+
+/* When menu is open */
+.menu-links.open {
+  max-height: 800px;
+  background-color: #280F3E; /* Dark background */
+  border: 1px solid #8D3199; /* Purple border */
+  animation: slideDownFadeIn 0.5s ease forwards; /* Trigger opening animation */
+  opacity: 1;
+}
+
+/* Close menu with animation */
+.menu-links:not(.open) {
+  animation: slideUpFadeOut 0.5s ease forwards; /* Trigger closing animation */
+}
+
+/* Menu link styling with hover effect */
+.menu-links.open a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #EBD9CA; /* Light text color for readability */
+  background-color: #280F3E; /* Consistent background for links */
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease;
+}
+
+/* Hover effect for links */
+.menu-links.open a:hover {
+  background-color: #8D3199; /* Purple background on hover */
+  color: #B5CC39; /* Bright green text on hover */
+}
+
+/* Additional Styling for Individual List Items */
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 800px;
+  background-color: #280F3E; /* Dark background */
+  border: 1px solid #8D3199; /* Purple border */
+}
+
+.menu-links.open a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #EBD9CA; /* Light text color */
+  background-color: #AB9E98; /* Soft neutral for links */
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links.open a:hover {
+  background-color: #8D3199; /* Purple background on hover */
+  color: #B5CC39; /* Bright green text on hover */
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  margin: 0 5%; /* Updated to maintain margin on smaller screens */
+  box-sizing: border-box;
+  background-color: #280F3E; /* Dark background */
+  color: #EBD9CA; /* Light color for section text */
+}
+
+.section-container {
+  display: flex;
+}
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 2px solid white;
+}
+
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.video-modal video {
+  max-width: 90%;
+  max-height: 90%;
+  border: 2px solid white;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 0rem;
+  height: 80vh;
+  background: linear-gradient(to bottom, #280F3E, #280F3E, #8D3199); /* Gradient from top to bottom */
+  color: #EBD9CA; /* Light color for section text */
+}
+
+/* PROFILE SECTION ICON STYLING */
+
+#profile .icon {
+  background-color: #8D3199; /* Purple color for icon background */
+  border-radius: 50%;
+  padding: 0.5rem; /* Add padding for better appearance */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+/* Icon Hover Animation */
+
+#profile .icon:hover {
+  transform: scale(1.1); /* Slightly scale up the icon */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth effect */
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section__text__p2 {
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  color: #B5CC39;
+}
+
+/* SOCIAL MEDIA ICONS */
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1 {
+  background-color: #8D3199;
+  color: #EBD9CA;
+  border: none;
+}
+
+.btn-color-2 {
+  background-color: #B5CC39;
+  color: #280F3E;
+  border: none;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1:hover {
+  background-color: #B5CC39;
+  color: #280F3E;
+}
+
+.btn-color-2:hover {
+  background-color: #8D3199;
+  color: #EBD9CA;
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 6rem;  
+  margin: 0; 
+  align-items: center; /* Center the content horizontally */
+  background: linear-gradient(to bottom, #8D3199, #280F3E, #280F3E);
+}
+
+.about-containers {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem; /* Adjust gap to increase spacing between rectangles */
+  margin: 2rem 0;
+}
+
+.about-details-containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center align items within the container */
+}
+
+.details-container {
+  
+  padding: 2rem; /* Increase padding for more internal spacing */
+  flex: 1;
+  border-radius: 3rem;
+  border: 0.1rem solid #EBD9CA;
+  text-align: center; /* Center text within the box */
+  background-color:#280F3E;
+  color: #EBD9CA;
+}
+
+/* Additional text centering and font styling */
+.section__text {
+  text-align: center;
+}
+
+/* ABOUT SECTION ICON STYLING */
+
+#about .icon {
+  background-color: #D1A505; /* Golden color for icon background */
+  border-radius: 50%;
+  padding: 0.5rem; /* Add padding for better appearance */
+}
+
+/* EXPERIENCES SECTION */
+
+#experiences {
+  padding: 5rem;
+  margin: 0; 
+  position:relative;
+  background: linear-gradient(to bottom, #280F3E, #8D3199, #8D3199);
+}
+
+.experiences-sub-title {
+  color: #AB9E98;
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experiences-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.article-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2.5rem;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+  padding: 5rem;
+  margin: 0; 
+  position:relative;
+  background: linear-gradient(to bottom, #8D3199, #280F3E, #280F3E);
+}
+
+.color-container {
+  background: #280F3E;
+  border-color: #AB9E98;
+}
+
+#projects .details-container {
+  padding: 2rem;
+  flex: 1;
+  border-radius: 3rem;
+  border: 0.1rem solid #EBD9CA;
+  text-align: center;
+  background-color: #8D3199;
+  color: #EBD9CA;
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: #B5CC39;
+}
+
+.project-btn {
+  color: white;
+  border-color: rgb(163, 163, 163);
+}
+
+#achievement {
+  padding: 5rem;
+  margin: 0; 
+  position:relative;
+  background: linear-gradient(to bottom, #280F3E, #8D3199, #8D3199);
+}
+
+/* CONTACT SECTION */
+
+#contact {
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #8D3199, #280F3E, #280F3E);
+  color: #EBD9CA;
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: auto;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: 0.1rem solid #AB9E98;
+  border-color: rgb(163, 163, 163);
+  background: #8D3199;
+  color: #EBD9CA;
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon,
+.facebook-icon,
+.instagram-icon {
+  height: 2.5rem;
+}
+
+/* Base styles for the contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 1px solid #AB9E98; /* Match the contact section border color */
+  background-color: #8D3199; /* Purple background color for form */
+  color: #EBD9CA;
+  width: 80%;
+  max-width: 600px; /* Max width to avoid stretching on large screens */
+  margin: 2rem auto;
+  box-sizing: border-box;
+}
+
+.contact-form label {
+  font-size: 1.2rem;
+  color: #EBD9CA; /* Light text color */
+  margin-bottom: 0.5rem;
+  align-self: flex-start;
+}
+
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #AB9E98; /* Light border */
+  background-color: #280F3E; /* Dark background for inputs */
+  color: #EBD9CA;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #AB9E98; /* Soft placeholder color */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #B5CC39; /* Bright green focus color */
+}
+
+.contact-form button {
+  background-color: #B5CC39;
+  color: #280F3E;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.contact-form button:hover {
+  background-color: #8D3199; /* Purple hover */
+  color: #EBD9CA;
+}
+
+.success-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #B5CC39;
+  margin-top: 1rem;
+  display: none; /* Initially hidden */
+}
+
+/* Button group */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Success message (Initially hidden) */
+.success-message {
+  display: none;
+}
+
+/* Style for the scroll buttons */
+.scroll-btn {
+  position: fixed;
+  background-color: transparent;
+  border: none;
+  padding: 10px; /* Reduce padding to make the icons smaller */
+  font-size: 1.5rem; /* Reduce icon size */
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  font-family: Arial, sans-serif;
+  border-radius: 50%; /* Make buttons round */
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Positioning the up and down buttons on opposite sides */
+#scrollUp {
+  left: 20px;
+  bottom: 80px;
+  color: #280F3E; /* Darker text color */
+  background-color: #B5CC39; /* Lighter background */
+}
+
+#scrollDown {
+  right: 20px;
+  bottom: 20px;
+  color: #280F3E; /* Darker text color */
+  background-color: #B5CC39; /* Lighter background */
+}
+
+/* Hover effect for the buttons */
+.scroll-btn:hover {
+  color: #B5CC39; /* Light background on hover */
+  background-color : #280F3E; /* Dark text color on hover */
+}
+
+#scrollDown:hover {
+  background-color: #B5CC39; /* Light background on hover */
+  color: #280F3E; /* Dark text color on hover */
+}
+
+/* Active state when clicked */
+.scroll-btn:active {
+  transform: scale(0.95);
+  background-color: #280F3E;
+  color: #B5CC39;
+}
+
+/* FOOTER */
+
+footer {
+ 
+  color: #AB9E98;
+}
+
+footer p {
+  text-align: center;
+}

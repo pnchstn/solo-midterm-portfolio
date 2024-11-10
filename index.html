@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Christian Ponce</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievement">Achievement</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div id="hamburger-nav">
+      <div class="logo">Christian Ponce</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experiences" onclick="toggleMenu()">Experiences</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#achievement" onclick="toggleMenu()">Achievement</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul> 
+      </div>
+    </div>
+
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic1.jpg" alt="Christian Ponce profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1"><i>Hello, I'm</i></p>
+        <h1 class="title">CHRISTIAN PONCE</h1>
+        <p class="section__text__p2"><i>I'm a committed<br> Computer Science Student<br>
+        who is eager to use technology<br>to solve real-world issues.<br>Focusing on data structures<br>and software development</i></p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="openPDF('./assets/resume.pdf')">
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="openImage('./assets/contact.png')">
+            Contact Info
+        </button>
+        </div>
+
+        <div id="socials-container">
+          <img src="./assets/facebook.png" alt="My Facebook profile" class="icon" onclick="location.href='https://web.facebook.com/pnchstn'" />
+          <img src="./assets/instagram.png" alt="My Instagram profile" class="icon" onclick="location.href='https://www.instagram.com/pnchstn/'" />
+          <img src="./assets/telegram.png" alt="My Telegram profile" class="icon" onclick="location.href='https://t.me/pnchstn?fbclid=IwZXh0bgNhZW0CMTEAAR1ttwqCzz5k-cE0zwlJzfHsvHxjgVqplwq5lsSgf2CKqCRCHs-FbGRu36c_aem_JcaU8PGxbPhu0tze8hckXQ'" />
+          <img src="./assets/formspree.png" alt="My Formspree profile" class="icon" onclick="location.href='https://formspree.io/forms/mkgnrejv/overview'" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <p class="section__text__p1">Get to Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="./assets/information.png" alt="Experience icon" class="icon" />
+              <h3>INFORMATION</h3>
+              <p><li>Christian Ponce</li></p>
+              <p><li>21 years old</li></p>
+              <p><li>09943920647</li></p>
+              <p><li>christianbosito
+              ponce@gmail.com</li></p>
+              <p><li>Filipino</li></p>
+              <p><li>3 years of Experience</li></p>
+            </div>
+            <div class="details-container">
+              <img src="./assets/education.png" alt="Education icon" class="icon" />
+              <h3>EDUCATION</h3>
+              <p><li>STEM Student at Las Piñas National Highschool</li></p>
+              <p><li>STEM Student at Philippine Merchant Marine School</li></p>
+              <p><li>Junior College in Bachelor of Science in Computer Science at CvSU Bacoor, Cavite Campus</li></p>
+            </div> 
+            <div class="details-container">
+              <img src="./assets/skills.png" alt="Education icon" class="icon" />
+              <h3>SKILLS</h3>
+              <p><li>Learning programming language</li></p>
+              <p><li>Learning basic of HTML & CSS</li></p>
+              <p><li>Learning about Database</li></p>
+            </div>
+          </div>
+          <div class="text-container">
+            <h3><i><p>
+              Good day, everyone! Hello, my name is Christian Ponce. I am now attending Cavite State University's Bacoor Campus, obtaining a Bachelor of Computer Science degree at the junior college level. This is my personal website portfolio!
+            </p></i></h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiences">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experiences</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h1 class="experience-sub-title">Frontend Development</h1>
+            <div class="article-container">
+              <article>
+                <img src="./assets/html.png" alt="HTML Experience icon" class="icon" />
+                <div>
+                  <h2>HTML</h2>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/css.png" alt="CSS Experience icon" class="icon" />
+                <div>
+                  <h2>CSS</h2>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/javascript.png" alt="JavaScript Experience icon" class="icon" />
+                <div>
+                  <h2>JavaScript</h2>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h1 class="experience-sub-title">Backend Development</h1>
+            <div class="article-container">
+              <article>
+                <img src="./assets/postgresql.png" alt="PostgreSQL Experience icon" class="icon" />
+                <div>
+                  <h2>PostgreSQL</h2>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/nodejs.png" alt="Node JS Experience icon" class="icon" />
+                <div>
+                  <h2>Node JS</h2>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/git.png" alt="Git Experience icon" class="icon" />
+                <div>
+                  <h2>Git</h2>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+    
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/rainy sunny.png" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Rainy Sunny</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="openImage('./assets/Images/RAINY SUNNY.png')">Open</button>
+              <button class="btn btn-color-2 project-btn" onclick="openVideo('./assets/Videos/rainysunny.mp4')">Live Demo</button>
+            </div>
+          </div>
+    
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/hoopx.png" alt="Project 2" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">HoopX Management System</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="openImage('./assets/Images/HOOPX.png')">Open</button>
+              <button class="btn btn-color-2 project-btn" onclick="openVideo('./assets/Videos/batangkalye.mp4')">Live Demo</button>
+            </div>
+          </div>
+    
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/detente apartment ms.png" alt="Project 3" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Detente Apartment Management System</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="openImage('./assets/Images/DETENTE APARTMENT MS.png')">Open</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Open</button>
+            </div>
+          </div>
+    
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/checklist.png" alt="Project 4" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Checklist</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="openImage('./assets/Images/CHECKLIST.png')">Open</button>
+              <button class="btn btn-color-2 project-btn" onclick="openVideo('./assets/Videos/checklist.mp4')">Live Demo</button>
+            </div>
+          </div>   
+        </div>
+      </div>
+    </section>
+    
+    <section id="achievement">
+      <p class="section__text__p1">Take a Look at This</p>
+      <h1 class="title">Achievement</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/dl certificate.png" alt="Achievement 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Dean's List Certificate</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="openImage('./assets/Images/DL CERTIFICATE.png')">View Photo</button>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section> 
+    
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-container">
+
+      <!-- Contact Form -->
+      <form id="contact-form" class="contact-form"
+       action="https://formspree.io/f/mkgnrejv" method="POST">
+        
+       <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email" />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required placeholder="Write your message here"></textarea>
+
+        <button type="submit" class="btn btn-color-1">Send</button>
+      </div>
+    </form>
+
+    <!-- Success Message (Initially Hidden) -->
+    <p id="success-message" class="success-message">Email successfully sent!</p> 
+    
+    </section>
+
+    <footer>
+      <nav>
+        <p>Copyright &#169; 2024 Christian Ponce. All Rights Reserved.</p>
+      </nav>
+    </footer>
+
+    <!-- Scroll Up Button -->
+    <button class="scroll-btn" id="scrollUp" onclick="scrollPage('up')">
+      &#8593; <!-- Unicode character for upward arrow -->
+    </button>
+
+    <!-- Scroll Down Button -->
+    <button class="scroll-btn" id="scrollDown" onclick="scrollPage('down')">
+      &#8595; <!-- Unicode character for downward arrow -->
+    </button>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
