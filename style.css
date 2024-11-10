@@ -295,6 +295,7 @@ section {
   height: 80vh;
   background: linear-gradient(to bottom, #280F3E, #280F3E, #8D3199); /* Gradient from top to bottom */
   color: #EBD9CA; /* Light color for section text */
+  margin: 0;
 }
 
 /* PROFILE SECTION ICON STYLING */
@@ -704,7 +705,7 @@ article .icon {
 }
 
 #scrollDown {
-  right: 20px;
+  right: 813px;
   bottom: 20px;
   color: #280F3E; /* Darker text color */
   background-color: #B5CC39; /* Lighter background */

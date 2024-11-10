@@ -56,16 +56,34 @@
   .about-containers {
     margin-top: 0;
   }
+  .contact-info-upper-container,
+  .contact-form {
+    width: 90%;
+    justify-content: center;
+  }
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    font-size: 0.8rem;
+  }
+  .contact-form button {
+    font-size: 0.85rem;
+    padding: 0.5rem 1.2rem;
+  } 
+  .form-buttons {
+    flex-direction: row;
+    gap: 1rem;
+  }
 }
+
 
 @media screen and (max-width: 600px) {
   #contact {
-      padding: 1rem;
-      margin-left: 0;
+    margin-left: 0;
+    height: fit-content;
     }
   
     .contact-info-upper-container {
-      width: 60%;
+      width: 90%;
       margin: 1rem 0;
       border-radius: 1rem;
     }
@@ -77,17 +95,17 @@
     }
   
     .contact-form {
-      width: 90%;
+      width: 80%;
       padding: 1rem;
       max-width: 100%;
-      box-shadow: none;
+      box-shadow: -10px 15px 12px rgba(40, 15, 62, 0.5);
       border-radius: 1rem;
     }
   
     .contact-form input[type="email"],
     .contact-form textarea {
-      padding: 0.75rem;
-      font-size: 0.9rem;
+      padding: 0.25rem;
+      font-size: 0.7rem;
     }
   
     .contact-form label {
