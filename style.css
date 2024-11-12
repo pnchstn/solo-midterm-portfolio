@@ -1,6 +1,7 @@
 /* GENERAL STYLES */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
   margin: 0;
@@ -14,47 +15,43 @@ html {
 body {
   background-color: #280F3E;  
   font-family: "Poppins", sans-serif;
-  color: #EBD9CA; /* Light text color */
+  color: #EBD9CA; 
 }
 
-p {
-  color: #EBD9CA; /* Light color for general text */
+p{
+  color: #EBD9CA;
 }
 
 /* TRANSITIONS */
-
 a,
 .btn {
   transition: all 300ms ease;
 }
 
 /* NAVIGATION */
-
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
-  background-color: #280F3E; 
+  height: 15vh;
+  background-color: #ffb703; 
 }
 
 .nav-links {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
-  display: flex; /* Use flex to layout the links */
+  display: flex; 
 }
 
 .nav-links a {
-  color: #FFD500;
+  color: #023047;
   position: relative;
   display: inline-block;
   overflow: hidden;
-  padding-bottom: 0.2rem;
-  transition: color 0.3s ease; /* Smooth color transition */
+  transition: color 0.3s ease; 
 }
 
-/* Effect: Underline grow and color change on hover */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -62,15 +59,10 @@ nav {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #FFD500; /* Bright yellow underline */
+  background-color: #faf600;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease;
-}
-
-/* Hover effect */
-.nav-links a:hover {
-  color: #B5CC39; /* Bright green on hover */
 }
 
 .nav-links a:hover::after {
@@ -79,35 +71,25 @@ nav {
 }
 
 .nav-links a:hover {
-  color: #FFD500; /* Bright yellow hover effect */
+  color: #faf600; 
 }
 
 a {
   color: #EBD9CA;
   text-decoration: none;
-  text-decoration-color: white;
+  text-decoration-color: #219ebc;
 }
 
 a:hover {
   color: #AB9E98;
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: #B5CC39;
-}
-
-.logo {
-  font-size: 2rem;
-  display: none;
-}
-
-.logo:hover {
-  cursor: default;
+  text-decoration-color: #219ebc;
 }
 
 /* HAMBURGER MENU */
-
 #hamburger-nav {
-  display: none; /* Show hamburger menu */
+  display: none; 
 }
 
 .hamburger-menu {
@@ -119,7 +101,7 @@ a:hover {
 
 .hamburger-icon {
   position: relative;
-  z-index: 10; /* Ensure it's clickable above other elements */
+  z-index: 10; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -130,26 +112,22 @@ a:hover {
 }
 
 .hamburger-icon:hover {
-  transform: scale(1.1); /* Slightly increase size */
-  background-color: rgba(0, 0, 0, 0.1); /* Light overlay effect */
+  transform: scale(1.1); 
+  background-color: rgba(0, 0, 0, 0.1); 
 }
 
 .hamburger-icon span {
   width: 100%;
   height: 2px;
   transition: all 0.3 ease-in-out;
-  transition: background-color 0.3s ease;
-  background-color: #EBD9CA; /* Light color for hamburger menu lines */
+  background-color: #EBD9CA; 
 }
 
 .hamburger-icon:hover span {
-  background-color: #B5CC39; /* Bright green on hover */
+  background-color: #B5CC39; 
 }
 
 /* MENU-LINKS */
-
-/* Apply animations to menu links */
-
 .menu-links {
   display: none;
   position: absolute;
@@ -159,44 +137,20 @@ a:hover {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
-  opacity: 0; /* Hidden by default */
+  opacity: 0; 
 }
 
-/* When menu is open */
 .menu-links.open {
   max-height: 800px;
-  background-color: #280F3E; /* Dark background */
-  border: 1px solid #8D3199; /* Purple border */
-  animation: slideDownFadeIn 0.5s ease forwards; /* Trigger opening animation */
+  background-color: #280F3E; 
+  border: 0.5rem solid #ffb703; 
+  border-radius: 1rem;
+  animation: slideDownFadeIn 0.5s ease forwards; 
   opacity: 1;
 }
 
-/* Close menu with animation */
 .menu-links:not(.open) {
-  animation: slideUpFadeOut 0.5s ease forwards; /* Trigger closing animation */
-}
-
-/* Menu link styling with hover effect */
-.menu-links.open a {
-  display: block;
-  padding: 10px;
-  text-align: center;
-  font-size: 1.5rem;
-  color: #EBD9CA; /* Light text color for readability */
-  background-color: #280F3E; /* Consistent background for links */
-  text-decoration: none;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease;
-}
-
-/* Hover effect for links */
-.menu-links.open a:hover {
-  background-color: #8D3199; /* Purple background on hover */
-  color: #B5CC39; /* Bright green text on hover */
-}
-
-/* Additional Styling for Individual List Items */
-.menu-links li {
-  list-style: none;
+  animation: slideUpFadeOut 0.5s ease forwards; 
 }
 
 .menu-links a {
@@ -213,43 +167,75 @@ a:hover {
   list-style: none;
 }
 
-.menu-links.open {
-  max-height: 800px;
-  background-color: #280F3E; /* Dark background */
-  border: 1px solid #8D3199; /* Purple border */
-}
-
 .menu-links.open a {
   display: block;
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: #EBD9CA; /* Light text color */
-  background-color: #AB9E98; /* Soft neutral for links */
+  color: #023047;
+  background-color: #faf600;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
 
 .menu-links.open a:hover {
-  background-color: #8D3199; /* Purple background on hover */
-  color: #B5CC39; /* Bright green text on hover */
+  background-color: #ffb703;
+  color: #023047;
 } 
 
+.menu-links.open a:active {
+  color: #0bedfd;
+  background-color: #219ebc;
+}
 
 /* SECTIONS */
-
 section {
-  padding-top: 4vh;
-  margin: 0 5%; /* Updated to maintain margin on smaller screens */
+  padding-top: 5vh;
+  margin: 0; 
   box-sizing: border-box;
-  background-color: #280F3E; /* Dark background */
-  color: #EBD9CA; /* Light color for section text */
+  background-color: #280F3E; 
+  color: #EBD9CA; 
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+  margin-right: 4.5rem;
+}
+
+.section-title {
+  color: #faf600;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 300;
+}
+
+.section__text__p1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section__text__p2 {
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 5.8rem;
 }
 
 .section-container {
   display: flex;
 }
 
+/* MODAL */
 .image-modal {
   position: fixed;
   top: 0;
@@ -289,69 +275,85 @@ section {
 }
 
 /* PROFILE SECTION */
+#profile img {
+  animation: zoomIn 1.5s ease forwards;
+  transform-origin: center;
+  opacity: 0;
+}
+
+@keyframes zoomIn {
+  0% {
+      transform: scale(0.9);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+#profile .section__text {
+  animation: fadeInUp 1.5s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
 
 #profile {
   display: flex;
   justify-content: center;
   gap: 0rem;
   height: 80vh;
-  background: linear-gradient(to bottom, #280F3E, #8D3199, #280F3E); /* Gradient from top to bottom */
-  color: #EBD9CA; /* Light color for section text */
+  background: linear-gradient(to bottom, #8D3199, #8D3199, #280F3E,#280F3E);
+  color: #EBD9CA; 
   margin: 0;
 }
 
-/* PROFILE SECTION ICON STYLING */
-
 #profile .icon {
-  background-color: #8D3199; /* Purple color for icon background */
+  background-color: #8D3199; 
   border-radius: 50%;
-  padding: 0.5rem; /* Add padding for better appearance */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+  padding: 0.5rem; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Icon Hover Animation */
-
 #profile .icon:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     height: 2.5rem;
 }
 
-.section__pic-container {
-  display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-  margin-right: 5.5rem;
-}
-
-.section__text {
-  align-self: center;
-  text-align: center;
-}
-
-.section__text p {
-  font-weight: 600;
-}
-
-.section__text__p1 {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.section__text__p2 {
-  font-size: 1.3rem;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-bottom: 1rem;
-}
-
 .title {
-  font-size: 3rem;
+  font-family: 'Clicker script', cursive;
+  font-size: 3.5rem;
   text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  opacity: 0; 
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards; 
   color: #faf600;
 }
 
-/* SOCIAL MEDIA ICONS */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px); 
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
 
+/* SOCIAL MEDIA ICONS */
 #socials-container {
   display: flex;
   justify-content: center;
@@ -366,7 +368,6 @@ section {
 }
 
 /* BUTTONS */
-
 .btn-container {
   display: flex;
   justify-content: center;
@@ -381,68 +382,59 @@ section {
   border-radius: 2rem;
 }
 
-/* Primary Button Style */
-
 .btn-color-1 {
-  background-color: #219ebc; /* Blue */
-  color: #023047; /* Dark Blue */
+  background-color: #219ebc; 
+  color: #023047; 
   border: none;
 }
 
 .btn-color-2 {
-  background-color: #ffb703; /* Yellow */
-  color: #023047; /* Dark Blue */
+  background-color: #ffb703; 
+  color: #023047; 
   border: none;
 }
 
-/* Hover Effects */
 .btn-color-1:hover {
-  background-color: #ffb703; /* Yellow on hover */
-  color: #023047; /* Dark Blue */
+  background-color: #faf600;
+  color: #023047;
   cursor: pointer;
 }
 
 .btn-color-2:hover {
-  background-color: #219ebc; /* Blue on hover */
-  color: #023047; /* Dark Blue */
+  background-color: #0bedfd;
+  color: #023047; 
   cursor: pointer;
 }
 
 /* ABOUT SECTION */
-
-/* General Section Styling */
 #about {
-  background: linear-gradient(to bottom, #280F3E, #280F3E,#8D3199, #8D3199); /* Gradient from top to bottom */
-  color: #EBD9CA; /* Light color for section text */
-  padding: 50px 20px;
+  background: linear-gradient(to bottom, #280F3E, #280F3E,#280F3E, 
+  #8D3199);
+  color: #EBD9CA; 
+  padding: 8px 20px;
   text-align: center;
   margin: 0;
 }
 
-.section-title {
-  color: #faf600;
-  font-size: 35px;
-  font-weight: bold;
-  margin-bottom: 40px;
-}
-
-/* What I Do Section */
 .what-i-do {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  gap: 5px;
   margin-bottom: 50px;
 }
 
 .what-i-do-item {
-  width: 200px;
   text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .what-i-do-item .icon {
   width: 60px;
   height: 60px;
   margin-bottom: 5px;
+
 }
 
 .what-i-do-item h2 {
@@ -452,26 +444,40 @@ section {
   color: #0bedfd;
 }
 
-.what-i-do-item p {
+.what-i-do-item p,
+.about-lavish p {
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  color: #ce9f29;
+  color: #faf600;
+  overflow: hidden; 
+  display: inline-block;
+  animation: typing 3s steps(30, end) forwards, cursor-blink 1s step-end infinite;
 }
 
-/* About Christian Section */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 50%; }
+}
+
+@keyframes cursor-blink {
+  50% { border-color: transparent; }
+}
+
+/* ABOUT ME SECTION */
 .about-lavish {
   margin-top: 50px;
   text-align: left;
   max-width: 900px;
   margin: auto;
   display: flex;
-  justify-content: space-between; /* Align elements to the left and right */
+  justify-content: space-between;
 }
 
 .about-description {
   font-size: 15px;
   color: #ccc;
   margin-bottom: 30px;
-  width: 45%; /* Ensure the paragraph occupies 45% width */
+  width: 45%; 
 }
 
 .section-subtitle {
@@ -481,17 +487,16 @@ section {
 }
 
 .about-lavish p {
-  font-size: 18px;
-  color: #FFD500;
+  font-size: 15px;
   margin-bottom: 30px;
 }
 
-/* Skills Section */
+/* SKILLS SECTION */
 .skills {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  width: 45%; /* Ensure skill bars occupy 45% width */
+  width: 45%; 
 }
 
 .skill {
@@ -518,7 +523,7 @@ section {
 .about-containers {
   display: flex;
   align-items: center;
-  gap: 2.5rem; /* Adjust gap to increase spacing between rectangles */
+  gap: 2.5rem; 
   margin: 2rem 0;
 }
 
@@ -526,26 +531,24 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Center align items within the container */
+  align-items: center;
 }
 
 .details-container {
-  
-  padding: 2rem; /* Increase padding for more internal spacing */
+  padding: 2rem;
   flex: 1;
   border-radius: 1.5rem;
   border: 0.1rem solid #EBD9CA;
-  text-align: center; /* Center text within the box */
-  background-color:#280F3E;
-  color: #EBD9CA;
+  text-align: center;
+  background-color:#023047;
+  color: #ffb703;
 }
 
 /* EXPERIENCES SECTION */
-
 #experiences {
-  background: linear-gradient(to bottom, #8D3199, #280F3E,#280F3E, #8D3199); /* Gradient from top to bottom */
-  color: #EBD9CA; /* Light color for section text */
-  margin: 0;
+  background: linear-gradient(to bottom, #8D3199, #8D3199,#280F3E, 
+  #280F3E); 
+  color: #EBD9CA; 
 }
 
 .timeline-container {
@@ -577,9 +580,13 @@ section {
   width: 80%;
   padding: 20px;
   border-radius: 8px;
-  color: #fff;
+  color: #0bedfd;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content p {
+  color: white;
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
@@ -598,6 +605,7 @@ section {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 article {
@@ -612,7 +620,6 @@ article .icon {
 }
 
 /* PROJECTS SECTION */
-
 .projects-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -626,6 +633,14 @@ article .icon {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   text-align: center;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.project-img {
+  border-radius: 1rem;
+  width: 85%;
+  height: 90%;
 }
 
 .project-image {
@@ -645,30 +660,27 @@ article .icon {
 }
 
 .project-info p {
-  font-size: 0.8rem;
-  color: white;
+  font-size: 15px;
+  color: #280F3E;
+  text-align: center;
 }
 
 .read-more-btn {
-  background-color: #48C774;
-  color: #023047;
-  padding: 10px 20px;
+  background-color: #023047;
+  color: #0bedfd;
+  padding: 17px 28px;
   border: none;
-  border-radius: 5px;
+  border-radius: 2rem;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 25px;
+  font-weight: bold;
 }
 
 .read-more-btn:hover {
   background-color: #219ebc;
 }
 
-.project-img {
-  border-radius: 1rem;
-  width: 90%;
-  height: 90%;
-}
-
+/* ACHIEVEMENT SECTION */
 #achievement {
   padding: 5rem;
   margin: 0; 
@@ -676,8 +688,11 @@ article .icon {
   background: linear-gradient(to bottom, #280F3E, #8D3199, #8D3199);
 }
 
-/* CONTACT SECTION */
+.experience-sub-title {
+  margin-bottom: 1rem;
+}
 
+/* CONTACT SECTION */
 #contact {
   display: flex;  
   flex-direction: column;
@@ -690,17 +705,6 @@ article .icon {
   width: 100%;
   box-sizing: border-box;
   margin-left: auto;
-}
-
-.contact-info-upper-container {
-  justify-content: center;
-  border-radius: 2rem;
-  border: 0.1rem solid #AB9E98;
-  border-color: rgb(163, 163, 163);
-  background: #8D3199;
-  color: #EBD9CA;
-  margin: 2rem auto;
-  width: 50rem;
 }
 
 .contact-info-container {
@@ -719,159 +723,152 @@ article .icon {
   cursor: default;
 }
 
-.email-icon,
-.facebook-icon,
-.instagram-icon {
-  height: 2.5rem;
-}
-
 .contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   border: 1px solid #AB9E98;
   background-color: #8D3199; 
   color: #EBD9CA;
   box-shadow: -10px 15px 12px rgba(40, 15, 62, 0.5);
-  width: 80%;
+  width: 60rem;
   max-width: 600px; 
   margin: 2rem auto;
   box-sizing: border-box;
 }
 
 .contact-form label {
-  font-size: 1.2rem;
-  color: #EBD9CA; /* Light text color */
+  color: #ffb703; 
   margin-bottom: 0.5rem;
   align-self: flex-start;
+  font-size: 20px;
 }
 
 .contact-form input[type="email"],
 .contact-form textarea {
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 1rem;
-  border: 1px solid #AB9E98; /* Light border */
-  background-color: #280F3E; /* Dark background for inputs */
-  color: #EBD9CA;
-  font-size: 1rem;
+  width: 33rem;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 30px;
+  border: 5px solid #280F3E; 
+  background-color: #280F3E;  
+  color: white;
   font-family: "Poppins", sans-serif;
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #AB9E98; /* Soft placeholder color */
+  color: lightgrey; 
+  font-size: 20px;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #B5CC39; /* Bright green focus color */
+  border-color: #280F3E;
 }
 
 .contact-form button {
-  background-color: #ffb703; /* Yellow */
-  color: #023047; /* Dark Blue */
+  background-color: #ffb703;
+  color: #023047; 
   border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 23px;
+  padding: 15px 30px;
+  font-weight: bold;
   border-radius: 2rem;
+  margin-top: 18spx;
   cursor: pointer;
   transition: all 300ms ease;
 }
 
 .contact-form button:hover {
-  background-color: #219ebc; /* Blue on hover */
-  color: #023047; /* Dark Blue */
+  background-color: #219ebc; 
+  color: #023047; 
   cursor: pointer;
 }
 
 .success-message {
   text-align: center;
   font-size: 1.2rem;
-  color: #B5CC39;
+  color: #ffb703;
   margin-top: 1rem;
-  display: none; /* Initially hidden */
+  display: none; 
 }
 
-/* Button group */
 .form-buttons {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
 }
 
-/* Success message (Initially hidden) */
 .success-message {
   display: none;
 }
 
-/* Style for the scroll buttons */
 .scroll-btn {
   position: fixed;
   background-color: transparent;
   border: none;
-  padding: 10px; /* Reduce padding to make the icons smaller */
-  font-size: 1.5rem; /* Reduce icon size */
+  padding: 10px; 
+  font-size: 1.5rem;
   cursor: pointer;
   z-index: 1000;
   transition: background-color 0.3s ease;
   font-family: Arial, sans-serif;
-  border-radius: 50%; /* Make buttons round */
-  width: 50px; /* Set a fixed width */
-  height: 50px; /* Set a fixed height */
+  border-radius: 50%; 
+  width: 50px;
+  height: 50px; 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Positioning the up and down buttons on opposite sides */
 #scrollUp {
   left: 30px;
   bottom: 15px;
-  color: #280F3E; /* Darker text color */
-  background-color: #B5CC39; /* Lighter background */
+  color: #023047; 
+  background-color: #0bedfd;
 }
 
 #scrollDown {
   right: 20px;
   bottom: 15px;
-  color: #280F3E; /* Darker text color */
-  background-color: #B5CC39; /* Lighter background */
+  color: #023047; 
+  background-color: #0bedfd;
 }
 
-/* Hover effect for the buttons */
 .scroll-btn:hover {
-  color: #B5CC39; /* Light background on hover */
-  background-color : #280F3E; /* Dark text color on hover */
+  color: #280F3E; 
+  background-color : #219ebc; 
 }
 
 #scrollDown:hover {
-  background-color: #B5CC39; /* Light background on hover */
-  color: #280F3E; /* Dark text color on hover */
+  color: #280F3E; 
+  background-color : #219ebc; 
 }
 
-/* Active state when clicked */
+#scrollUp:hover {
+  color: #280F3E; 
+  background-color : #219ebc; 
+}
+
 .scroll-btn:active {
   transform: scale(0.95);
-  background-color: #280F3E;
-  color: #B5CC39;
+  color: #280F3E; 
+  background-color : #219ebc; 
 }
 
-/* FOOTER */
-
+/* FOOTER SECTION */
 footer {
   height: 10vh;
-  background-color: #8D3199;
+  background-color: #ffb703;
   margin: 0;
 }
 
 footer p {
-  margin-top: 1rem;
+  color: #023047;
   justify-content: center;
   text-align: center;
 }

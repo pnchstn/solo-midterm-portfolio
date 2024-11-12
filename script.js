@@ -6,14 +6,11 @@ function toggleMenu() {
 }
 
 function openPDF() {
-    // Here you can add any additional actions you want to perform before opening the PDF
-    console.log("CV Download button clicked!"); // Example action
+    console.log("CV Download button clicked!"); 
 
-    // Redirect to the PDF file
     location.href = './assets/resume.pdf';
 }
 
-  // Function to open image in a modal
 function openImage(imageSrc) {
   const modal = document.createElement("div");
   modal.className = "image-modal";
@@ -21,14 +18,11 @@ function openImage(imageSrc) {
   const img = document.createElement("img");
   img.src = imageSrc;
 
-  // Close modal on click outside the image
   modal.onclick = () => document.body.removeChild(modal);
 
   modal.appendChild(img);
   document.body.appendChild(modal);
 }
-
-  // Function to open and play video in a modal
 
 function openVideo(videoSrc) {
   const modal = document.createElement("div");
@@ -39,7 +33,6 @@ function openVideo(videoSrc) {
   video.controls = true;
   video.autoplay = true;
 
-  // Close modal on click outside video
   modal.onclick = () => document.body.removeChild(modal);
 
   modal.appendChild(video);
@@ -80,11 +73,19 @@ app.post("/send-email", (req, res) => {
 
 app.listen(3000, () => console.log("Server started on port 3000"));
 
-// Scroll function to go up or down
 function scrollPage(direction) {
   if (direction === 'up') {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   } else if (direction === 'down') {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); // Scroll to the bottom
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
   }
 }
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});

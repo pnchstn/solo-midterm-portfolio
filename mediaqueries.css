@@ -15,6 +15,24 @@
   #projects {
     height: fit-content;
   }
+  .contact-form {
+    font-size: 23px;
+    padding: 2rem;
+    width: 50rem;
+    max-width: 100%;
+    box-shadow: -10px 15px 12px rgba(40, 15, 62, 0.5);
+    border-radius: 1rem;  
+  }
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    font-size: 30px;
+    width: 45rem;
+  }
+  .contact-form button {
+    font-size: 23px;
+    padding: 15px 28px;
+    margin-top: 25px;
+  } 
 }
   
 @media screen and (max-width: 1200px) {
@@ -46,7 +64,7 @@
     height: fit-content;
   }
   section {
-    margin: 0 5%;
+    margin: 0;
   }
   .section__pic-container {
     width: 275px;
@@ -58,37 +76,39 @@
   }
   .contact-info-upper-container,
   .contact-form {
-    width: 90%;
+    width: 35rem;
     justify-content: center;
   }
   .contact-form input[type="email"],
   .contact-form textarea {
-    font-size: 0.8rem;
+    font-size: 30px;
+    width: 30.5rem;
   }
   .contact-form button {
-    font-size: 0.85rem;
-    padding: 0.5rem 1.2rem;
+    font-size: 23px;
+    padding: 15px 28px;
+    margin-top: 25px;
   } 
   .form-buttons {
     flex-direction: row;
     gap: 1rem;
   }
   .menu-links {
-    display: none; /* Initially hide the dropdown menu */
+    display: none; 
   }
   
   .menu-links.open {
-    display: block; /* Show the dropdown when open */
+    display: block; 
   }
 }
 
 @media screen and (max-width: 600px) {
   .menu-links {
-    display: none; /* Initially hide the dropdown menu */
+    display: none; 
   }
   
   .menu-links.open {
-    display: block; /* Show the dropdown when open */
+    display: block; 
   }
 
   #contact {
@@ -109,8 +129,8 @@
     }
   
     .contact-form {
-      width: 80%;
-      padding: 1rem;
+      width: 25rem;
+      padding: 2rem;
       max-width: 100%;
       box-shadow: -10px 15px 12px rgba(40, 15, 62, 0.5);
       border-radius: 1rem;
@@ -118,18 +138,22 @@
   
     .contact-form input[type="email"],
     .contact-form textarea {
-      padding: 0.25rem;
-      font-size: 0.7rem;
+      padding: 3px;
+      font-size: 30px;
+      width: 20rem;
+      margin-top: 15px;
     }
   
     .contact-form label {
-      font-size: 1rem;
+      font-size: 25px;
     }
   
     .contact-form button {
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
-      border-radius: 1.5rem;
+      padding: 17px 28px;
+      font-size: 20px;
+      border-radius: 2rem;
+      font-weight: bold;
+      margin-top: 15px;
     }
     .form-buttons {
       flex-direction: column;
@@ -141,6 +165,7 @@
   }
   footer p {
     font-size: 15px;
+    margin-top: 35px;
   }
   #profile {
     display: block;
@@ -189,22 +214,26 @@
   .text-container {
     text-align: justify;
   }
+  .what-i-do-item h2{
+    font-size: 15px;
+  }
+  .what-i-do-item .icon {
+    width: 2.5rem;
+    height: auto;
+  }
 }
 
-
-/* Animation for menu opening */
 @keyframes slideDownFadeIn {
   0% {
     opacity: 0;
-    transform: translateY(-20px); /* Slide down from above */
+    transform: translateY(-20px); 
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* End at original position */
+    transform: translateY(0); 
   }
 }
 
-/* Animation for menu closing */
 @keyframes slideUpFadeOut {
   0% {
     opacity: 1;
@@ -212,7 +241,6 @@
   }
   100% {
     opacity: 0;
-    transform: translateY(-20px); /* Slide back up */
-  }
+    transform: translateY(-20px); 
 }
 }
